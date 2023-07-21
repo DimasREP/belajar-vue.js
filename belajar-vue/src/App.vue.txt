@@ -1,0 +1,90 @@
+<script setup>
+import { ref } from "vue";
+
+//interpolasi teks
+const msg = "Hallo World";
+
+//rawrhtml (menggunakan html yang ada dalam variabel)
+const rawrhtml = "<h2> Haii Semuanyaa <h2>";
+
+//aritmatika
+let number = 7;
+
+//v-bind  (menggunakan atribut html ke vue js menggunakan v-bind)
+const link = "https://chat.openai.com";
+
+// pengulangan
+let todos = [
+  { teks: "Belajar JavaScript" },
+  { teks: "Belajar Vue" },
+  { teks: "Buat proyek keren" },
+];
+
+// Split Reverse Message
+let message = ref("Hai Vue JS");
+function balikkanPesan() {
+  message.value = message.value.split("").reverse().join("");
+}
+
+// Input
+let pesan = ref("Hai Vue");
+
+//latihan
+let siswa = [
+  { nama: "Dimas Rizki ", kelas: "RPL 1", umur: 17, alamat: "Bandung" },
+  { nama: "Ikbal miftahudin", kelas: "RPL 1", umur: 15, alamat: "Bandung" },
+  { nama: "Andika Viqri ", kelas: "RPL 2", umur: 16, alamat: "Bandung" },
+  { nama: "Hamdan Effendi ", kelas: "TKRO 1", umur: 18, alamat: "Bandung" },
+  { nama: "Septian dwi nugraha ", kelas: "RPL 1", umur: 20, alamat: "Bandung" },
+];
+
+let judul = ["Nama", "Kelas", "Umur", "Alamat"];
+</script>
+
+<template>
+  <div id="app">
+    <!-- interpolasi -->
+    <span>{{ msg }}</span
+    ><br />
+
+    <!-- rawr -->
+    <span v-html="rawrhtml" style="color: blue"></span>
+
+    <!-- aritmatika -->
+    <p>{{ parseInt(number) + 5 }}</p>
+
+    <!-- button -->
+    <button v-bind:disabled="isButtonDisabled">Tombol</button><br />
+
+    <!-- v-bind -->
+    <a v-bind:href="link">CHAT GPT</a><br />
+  </div>
+  <!-- For -->
+  <br />
+  Pengulangan
+  <ol>
+    <li v-for="todo in todos">
+      {{ todo.teks }}
+    </li>
+  </ol>
+  <!-- Split Button -->
+  <p>{{ message }}</p>
+  <button v-on:click="balikkanPesan">Balikkan Pesan</button> <br />
+
+  <!-- Input -->
+  <p>{{ pesan }}</p>
+  <input v-model="pesan" />
+
+  <!--Latihan -->
+  <table border="2">
+    <tr>
+      <th v-for="datajudul in judul">{{ datajudul }}</th>
+    </tr>
+    <tr v-for="data in siswa">
+      <td>{{ data.nama }}</td>
+      <td>{{ data.kelas }}</td>
+      <td>{{ data.umur }}</td>
+      <td>{{ data.alamat }}</td>
+    </tr>
+  </table>
+</template>
