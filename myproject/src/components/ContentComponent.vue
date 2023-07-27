@@ -5,7 +5,7 @@ import { TheCard } from "flowbite-vue"
   <center>
     <h5
       class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-      New Arival
+      NEW ARIVAL
     </h5>
   </center>
   <br />
@@ -74,9 +74,10 @@ import { TheCard } from "flowbite-vue"
       variant="image"
       img-src="https://cdn.arenaexperience.com/images/imagepro/thumb/imgpro_1679578360604703406.jpg"
       img-alt="Desk"
+      class="ml-1"
     >
       <h5
-        class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+        class="mb- 2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
       >
         The Hand Gray
       </h5>
@@ -100,7 +101,7 @@ import { TheCard } from "flowbite-vue"
     <h5
       class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
     >
-      Topi
+      TOPI
     </h5>
   </center>
   <br />

@@ -11,15 +11,20 @@
       <h1 class="selamatdatang">DATANG</h1>
       <p class="font-semibold">kami tamvan dan pemberani emangg bolehhh??</p>
       <p class="font-semibold">selamatt berbelanjaaaa</p>
+      <Button color="dark" class="mt-5"  >TERTARIK</Button>
     </div>
   </div>
 </template>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap");
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
 .selamatdatang {
   font-family: "Montserrat", sans-serif;
   font-size: 60px;
   font-weight: bold;
 }
 </style>
+
+<script setup>
+import { Button } from 'flowbite-vue'
+</script>
